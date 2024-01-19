@@ -1,8 +1,13 @@
-from flask_restx import Namespace,Resource
+from flask_restx import Namespace,Resource,fields
 
 order_namespace = Namespace('orders', description="a namespace for orders")
 
-    
+
+@order_namespace.model(
+    'Order',{
+        
+    }
+)
 @order_namespace.route('/orders')
 class OrderGetCreate(Resource):
     
